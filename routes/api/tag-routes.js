@@ -17,11 +17,7 @@ router.get('/', async (req, res) => {
       ]
     });
 
-    console.log(records);
-
     const tags = records.map((record) => record.get({ plain: true }));
-
-    console.log(tags);
 
     res.json(tags);
 
